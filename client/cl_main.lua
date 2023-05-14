@@ -5,8 +5,8 @@ local Blips = {}
 
 -- Setup --
 local function SetupFastTravel()
-    for x,t in pairs(Config.Locations) do
-        local Ped = Config.Locations[x].Ped
+    for x, t in pairs(Config.Locations) do
+        local Ped = t.Ped
         if Peds[x] == nil then
             Peds[x] = XTSpawnPed(Ped.model, Ped.coords)
 
@@ -23,7 +23,7 @@ local function SetupFastTravel()
                 distance = 4,
             })
         end
-        local Blip = Config.Locations[x].Blip
+        local Blip = t.Blip
         if Blip.enable and Blips[x] == nil then
             Blips[x] = XTBlip(Blip.name, vector3(Ped.coords.x, Ped.coords.y, Ped.coords.z), Blip.sprite, Blip.size)
         end
@@ -43,7 +43,7 @@ RegisterNetEvent('xtr-telegrams:client:FastTravelMenu', function(CURRENT)
     CurrentLocation = CURRENT
     local Locations = {}
 
-    for x,t in pairs(Config.Locations) do
+    for x, t in pairs(Config.Locations) do
         if x ~= CURRENT then
             Locations[#Locations+1] = {
                 title = x,
