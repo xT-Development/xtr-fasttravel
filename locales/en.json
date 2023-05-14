@@ -1,0 +1,11 @@
+{
+    "travelText1": "Travelling To...",
+    "travelText2": "Arriving Soon!",
+    "price": "Price: $",
+    "cash": "Cash: $",
+    "gold": "Gold: $",
+    "targetTitle": "Fast Travel",
+    "paymentTypeTitle": "Choose Payment Type",
+    "paymentType": "Payment Type",
+    "fastTravelTitle": "Fast Travel  \nCurrent: ",
+}
