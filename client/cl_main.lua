@@ -66,7 +66,7 @@ end)
 RegisterNetEvent('xtr-fasttravel:client:AttemptTravel', function(DATA)
     if DATA.target ~= CurrentLocation then
         local Payment = lib.inputDialog(locale('paymentTypeTitle'), {
-            { type = 'select', label = locale(paymentType), options = {
+            { type = 'select', label = locale('paymentType'), options = {
                 { value = 'cash', label = locale('cash')..Config.Locations[DATA.target].price },
                 { value = 'bank', label = locale('gold')..Config.Locations[DATA.target].price }
             }},
